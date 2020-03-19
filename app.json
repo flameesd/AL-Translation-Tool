@@ -1,0 +1,28 @@
+{
+  "id": "da9ff561-3a43-4b2b-855c-8f6b705826c6",
+  "name": "FLAME ESD Translation Tool",
+  "publisher": "FLAME ENTERPRISE SOLUTIONS & DEVELOPMENT CO.,LTD.",
+  "version": "1.0.0.0",
+  "brief": "This App is handles the Translations from AL",
+  "description": "AL Translation Tool",
+  "privacyStatement": "https://esd-blog.com/privacy-policy/",
+  "EULA": "https://www.gnu.org/licenses/gpl-3.0.txt",
+  "help": "https://esd-blog.com/2020/03/18/flame-esd-translation-tool/",
+  "url": "https://esd-blog.com",
+  "logo": "./Images/logo.jpg",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 78500,
+      "to": 78549
+    }
+  ],
+  "showMyCode": true,
+  "features": ["TranslationFile"],
+  "runtime": "3.0",
+  "target": "Internal",
+  "supportedLocales": ["en-US"]
+}

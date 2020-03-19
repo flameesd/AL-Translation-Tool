@@ -1,0 +1,33 @@
+{
+    "name": "FLAME ESD Ruleset",  
+    "rules": [
+        {
+        "id": "AA0005",
+        "action": "None"
+        },
+        {
+            "id": "AA0152",
+            "action": "None"
+        },
+        {
+            "id": "AA0218",
+            "action": "None"
+        },
+        {
+            "id": "AS0053",
+            "action": "None"
+        },
+        {
+            "id": "AA0215",
+            "action": "None"
+        },
+        {
+            "id": "AA0214",
+            "action": "None"
+        },
+        {
+            "id": "AW0006",
+            "action": "None"
+        }
+    ]
+}

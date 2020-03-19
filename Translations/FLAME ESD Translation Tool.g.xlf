@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="FLAME ESD Translation Tool">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 2267536678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dictionary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Dictionary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2267536678 - Field 1976418201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Dictionary - Field Source Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2267536678 - Field 101975653 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Target Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Dictionary - Field Target Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2267536678 - Field 3222870172 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Dictionary - Field Source Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2267536678 - Field 2344968528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Target Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Dictionary - Field Target Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 2965272548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Project Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 3448914995 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Is Not Translate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Is Not Translate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 705176954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text 1 (1-250)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Text 1 (1-250) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 1178511827 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text 2 (250-500)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Text 2 (250-500) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 3272492757 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Translate Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 1926814298 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Translate Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 11841710 - Field 1926814298 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Source,Target</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate File - Field Translate Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Note</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Field 2965272548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Field Project Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Field 1976418201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Field Source Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Field 101975653 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Target Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Field Target Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Field 3222870172 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Field Source Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Field 2344968528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Target Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Field Target Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Field 3484146572 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Is Translated</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Field Is Translated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2438796504 - Field 2288156083 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translated by Web</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Note - Field Translated by Web - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2183797917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2183797917 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2183797917 - Field 1022657752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Default Source Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Setup - Field Default Source Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2183797917 - Field 3602357627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translate Setup - Field Project Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2183797917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 600182216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translation Project</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translation Project - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 600182216 - Field 2965272548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translation Project - Field Project Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 600182216 - Field 904306078 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translation Project - Field Project Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 600182216 - Field 1976418201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translation Project - Field Source Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 600182216 - Field 101975653 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Target Language</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translation Project - Field Target Language - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 600182216 - Field 3324508093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translation Project - Field File Location - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 600182216 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ESD Translation Project - Field No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 495402180 - NamedType 184054750" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method ImporttranslateNotes - NamedType finishMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 3182765835 - NamedType 184054750" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method AddSourceText - NamedType finishMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 3089930585 - NamedType 184054750" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fiinish the translation. Please check the</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method TranslateAll - NamedType finishMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 1261306255 - NamedType 1043693973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>https://translate.googleapis.com/translate_a/single?client=gtx&amp;sl=%1&amp;tl=%2&amp;dt=t&amp;q=%3</source>
+          <note from="Developer" annotates="general" priority="2">%1=Source Language;%2=Target Language;%3=Source Text</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method TranslateWithGoogle - NamedType EndPointTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 3694683136 - NamedType 184054750" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method ExportTranslateFile - NamedType finishMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 3738020737 - NamedType 1643251673" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure for delete data?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method DeleteTranslateData - NamedType deleteQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 3738020737 - NamedType 184054750" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method DeleteTranslateData - NamedType finishMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 2840386583 - NamedType 184054750" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method ImportTranslateFile - NamedType finishMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 304109668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dictionary List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Dictionary List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 304109668 - Action 1517669959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Translate File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Dictionary List - Action Import Translate File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 160910956 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate File List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate File List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 160910956 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate File List - Control Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1616543161 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Notes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate Notes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1616543161 - Action 1749853116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dictionary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate Notes - Action Dictionary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1616543161 - Action 2724804195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Source Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate Notes - Action Add Source Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1616543161 - Action 2595900721 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate All</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate Notes - Action Translate All - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1616543161 - Action 136279836 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translate Notes - Action Translate Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2061598010 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translation Project List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translation Project List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2061598010 - Action 1749853116 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dictionary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translation Project List - Action Dictionary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2061598010 - Action 342795554 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate Note</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translation Project List - Action Translate Note - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2061598010 - Action 1986051892 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Translate File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translation Project List - Action Translate File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2061598010 - Action 3124326621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translation Project List - Action Import File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2061598010 - Action 1219836582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translation Project List - Action Export File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2061598010 - Action 3069496259 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ESD Translation Project List - Action Delete Data - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
