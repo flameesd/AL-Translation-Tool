@@ -172,22 +172,21 @@ codeunit 78500 "ESD Translation Mgt."
         TargetText := '';
         if dictionary.Get(translateNote."Source Language", translateNote."Target Language", translateNote."Source Text") then
             TargetText := dictionary."Target Text";
-        if TargetText = '' then begin
-            TargetText := TranslateWithGoogle('en-US', 'de-DE', translateNote."Source Text");
-            translateNote."Translated by Web" := true;
+        if TargetText = '' then
+            if TranslateWithGoogle('en-US', 'de-DE', translateNote."Source Text", TargetText) then
+                translateNote."Translated by Web" := true;
+        if translateNote."Target Text" <> '' then begin
+            translateNote."Target Text" := TargetText;
+            translateNote."Is Translated" := true;
+            translateNote.Modify();
         end;
-
-        translateNote."Target Text" := TargetText;
-        translateNote."Is Translated" := true;
-
-        translateNote.Modify();
         if translateNote."Translated by Web" then
             UpdateDictionaryFromNote(translateNote);
 
         UpdateTranslateFileEditTarget(translateNote."Project Code", translateNote);
     end;
 
-    local procedure TranslateWithGoogle(SourceLang: Text[10]; TargetLang: Text[10]; SourceText: Text[250]) TargetText: text[250]
+    local procedure TranslateWithGoogle(SourceLang: Text[10]; TargetLang: Text[10]; SourceText: Text[250]; TargetText: text[250]): Boolean
     var
         EndPoint: Text;
         EndPointTxt: Label 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=%1&tl=%2&dt=t&q=%3', Comment = '%1=Source Language;%2=Target Language;%3=Source Text';
@@ -196,9 +195,9 @@ codeunit 78500 "ESD Translation Mgt."
         HttpClient.DefaultRequestHeaders().Add('User-Agent', 'Dynamics 365');
         EndPoint := StrSubstNo(EndPointTxt, SourceLang, TargetLang, SourceText);
         if not HttpClient.Get(EndPoint, ResponseMessage) then
-            Error('The call to the web service failed.');
+            exit(false);
         if not ResponseMessage.IsSuccessStatusCode() then
-            error('The web service returned an error message:\\' + 'Status code: %1\' + 'Description: %2', ResponseMessage.HttpStatusCode(), ResponseMessage.ReasonPhrase());
+            exit(false);
         ResponseMessage.Content().ReadAs(TransText);
         TargetText := copystr(GetLines(TransText), 1, MaxStrLen(TargetText));
 
@@ -226,6 +225,7 @@ codeunit 78500 "ESD Translation Mgt."
         translateFileEditTargetL: Record "ESD Translate File";
         checkPosStart: Integer;
         getTextL: Text;
+        FullTextLine: Text;
     begin
         translateFile.SetRange("Project Code", GetProjectCode);
         translateFile.SetRange("Translate Type", translateFile."Translate Type"::Source);
@@ -237,7 +237,10 @@ codeunit 78500 "ESD Translation Mgt."
                 translateFileEditTargetL."Translate Text" := translateNote."Target Text";
                 checkPosStart := StrPos(translateFileEditTargetL."Text 1 (1-250)", '<target>');
                 getTextL := CopyStr(translateFileEditTargetL."Text 1 (1-250)", 1, (checkPosStart + 7));
-                translateFileEditTargetL."Text 1 (1-250)" := getTextL + translateNote."Target Text" + '</target>';
+                FullTextLine := getTextL + translateNote."Target Text" + '</target>';
+                translateFileEditTargetL."Text 1 (1-250)" := CopyStr(FullTextLine, 1, MaxStrLen(translateFileEditTargetL."Text 1 (1-250)"));
+                if StrLen(FullTextLine) > MaxStrLen(translateFileEditTargetL."Text 1 (1-250)") then
+                    translateFileEditTargetL."Text 2 (250-500)" := copystr(CopyStr(FullTextLine, MaxStrLen(translateFileEditTargetL."Text 1 (1-250)") + 1), 1, MaxStrLen(translateFileEditTargetL."Text 2 (250-500)"));
                 translateFileEditTargetL.Modify();
             until translateFile.Next() = 0;
     end;
@@ -307,52 +310,78 @@ codeunit 78500 "ESD Translation Mgt."
         inputFile: File;
         readText: Text;
         fileLocation: Text;
+        objectIdentification: Text;
+        lastObjectIdentification: Text;
         textTranslateSource: Text[250];
         textTranslateTarget: Text[250];
         textSourceCode: Code[10];
         textTargetCode: Code[10];
-        textSourceID: Integer;
-        textTargetID: Integer;
         languageCode: Integer;
         checkPosStart: Integer;
-        checkPosStop: Integer;
-        checkLength: Integer;
         finishMsg: Label 'Finish';
+        ENULanguageCodeTxt: Label 'ENU';
+        DEULanguageCodeTxt: Label 'DEU';
+        processingMsg: Label 'Processing ....';
+        window: Dialog;
     begin
         fileLocation := copystr(FileMgtL.OpenFileDialog('BC File Browser', '', '*TXT files (*.txt)|*.TXT|All files (*.*)|*.*'), 1, MaxStrLen(fileLocation));
         inputFile.TEXTMODE := true;
         inputFile.OPEN(fileLocation);
-        While inputFile.READ(readText) <> 0 DO BEGIN
-            checkPosStart := StrPos(readText, '-A');
-            if checkPosStart <> 0 then begin
-                checkPosStop := StrPos(readText, '-L');
-                checkLength := checkPosStop - (checkPosStart + 2);
-                Evaluate(languageCode, CopyStr(readText, checkPosStart + 2, checkLength));
+        window.Open(processingMsg);
+        While inputFile.READ(readText) <> 0 DO
+            if GetLanguageCode(languageCode, objectIdentification, readText) then begin
                 language.SetRange("Windows Language ID", languageCode);
                 if language.FindFirst() then begin
-                    if (textTargetCode <> '') and (textSourceCode = '') then begin
-                        textSourceCode := language.Code;
-                        textSourceID := languageCode;
-                    end;
-                    if (textTargetCode = '') and (textSourceCode = '') then begin
-                        textTargetCode := language.Code;
-                        textTargetID := languageCode;
-                    end;
                     checkPosStart := StrPos(readText, ':');
-                    if languageCode = textTargetID then
-                        textTranslateTarget := CopyStr(readText, checkPosStart + 1, MaxStrLen(textTranslateTarget))
-                    else
-                        textTranslateSource := CopyStr(readText, checkPosStart + 1, MaxStrLen(textTranslateSource));
-                    if (textTranslateSource <> '') and (textTranslateTarget <> '') then begin
-                        CheckInsertDictionary(textSourceCode, textTargetCode, textTranslateSource, textTranslateTarget);
-                        Clear(textTranslateSource);
-                        Clear(textTranslateTarget);
+                    if lastObjectIdentification <> ObjectIdentification then begin
+                        textTranslateSource := '';
+                        textTranslateTarget := '';
+                        lastObjectIdentification := '';
                     end;
+
+                    case language.Code of
+                        ENULanguageCodeTxt:
+                            begin
+                                textSourceCode := language.Code;
+                                textTranslateSource := CopyStr(readText, checkPosStart + 1, MaxStrLen(textTranslateSource));
+                            end;
+                        DEULanguageCodeTxt:
+                            begin
+                                textTargetCode := language.Code;
+                                textTranslateTarget := CopyStr(readText, checkPosStart + 1, MaxStrLen(textTranslateTarget));
+                            end;
+                    end;
+
+                    if (textTranslateSource <> '') and (textTranslateTarget <> '') then
+                        CheckInsertDictionary(textSourceCode, textTargetCode, textTranslateSource, textTranslateTarget);
+
+                    lastObjectIdentification := ObjectIdentification;
                 end;
             end;
-        END;
         inputFile.CLOSE();
+        window.Close();
         Message(finishMsg);
+    end;
+
+    local procedure GetLanguageCode(var languageCode: Integer; var objectIdentification: Text; readText: Text): Boolean
+    var
+        languageText: Text;
+        NumberOfElements: Integer;
+        CommentTxt: Label 'A1';
+    begin
+        languageText := CopyStr(readText, 1, StrPos(readText, ':') - 1);
+        NumberOfElements := STRLEN(DELCHR(languageText, '=', DELCHR(languageText, '=', '-')));
+        languageText := readText.Replace('-', ',');
+        languageText := SelectStr(NumberOfElements, languageText);
+        if languageText = CommentTxt then
+            exit(false);
+        if CopyStr(languageText, 1, 1) <> 'A' then
+            exit(false);
+        languageText := CopyStr(languageText, 2);
+        if not Evaluate(languageCode, languageText) then
+            exit(false);
+        objectIdentification := CopyStr(readText, 1, StrPos(readText, languageText) - 3);
+        exit(true);
     end;
 
     procedure CheckInsertDictionary(GetSource: Code[10]; GetTarget: Code[10]; GetSourceTranslate: Text[250]; GetTargetTranslate: Text[250])

@@ -213,6 +213,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method ImportTranslateFile - NamedType finishMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 2840386583 - NamedType 2953603651" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ENU</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method ImportTranslateFile - NamedType ENULanguageCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 2840386583 - NamedType 866095285" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DEU</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method ImportTranslateFile - NamedType DEULanguageCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 2840386583 - NamedType 523842150" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processing ....</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method ImportTranslateFile - NamedType processingMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4223848835 - Method 3106860843 - NamedType 2379067997" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ESD Translation Mgt. - Method GetLanguageCode - NamedType CommentTxt</note>
+        </trans-unit>
         <trans-unit id="Page 304109668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dictionary List</source>
           <note from="Developer" annotates="general" priority="2"></note>
