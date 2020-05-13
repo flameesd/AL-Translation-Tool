@@ -175,7 +175,7 @@ codeunit 78500 "ESD Translation Mgt."
         if TargetText = '' then
             if TranslateWithGoogle('en-US', 'de-DE', translateNote."Source Text", TargetText) then
                 translateNote."Translated by Web" := true;
-        if translateNote."Target Text" <> '' then begin
+        if TargetText <> '' then begin
             translateNote."Target Text" := TargetText;
             translateNote."Is Translated" := true;
             translateNote.Modify();
