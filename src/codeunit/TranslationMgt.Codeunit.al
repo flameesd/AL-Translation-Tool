@@ -86,8 +86,10 @@ codeunit 78500 "ESD Translation Mgt."
         translateNote.SetRange("Project Code", GetProjectCode);
         if not translateNote.IsEmpty() then
             translateNote.DeleteAll();
+        translateFile.SetCurrentKey("Translate Type");
         translateFile.SetRange("Project Code", GetProjectCode);
         translateFile.SetRange("Translate Type", translateFile."Translate Type"::Source);
+        translateFile.SetRange("Is Not Translate", false);
         if translateFile.FindSet() then
             repeat
                 if not translateNote.Get(GetProjectCode, translationProject."Source Language", translateFile."Translate Text") then begin
@@ -227,21 +229,25 @@ codeunit 78500 "ESD Translation Mgt."
         getTextL: Text;
         FullTextLine: Text;
     begin
+        if translateNote."Target Text" = '' then
+            exit;
         translateFile.SetRange("Project Code", GetProjectCode);
         translateFile.SetRange("Translate Type", translateFile."Translate Type"::Source);
         translateFile.SetRange("Translate Text", translateNote."Source Text");
         if translateFile.FindSet(true) then
             repeat
                 translateFileEditTargetL.Get(GetProjectCode, translateFile."Line No." + 1);
-                translateFileEditTargetL."Is Not Translate" := false;
-                translateFileEditTargetL."Translate Text" := translateNote."Target Text";
-                checkPosStart := StrPos(translateFileEditTargetL."Text 1 (1-250)", '<target>');
-                getTextL := CopyStr(translateFileEditTargetL."Text 1 (1-250)", 1, (checkPosStart + 7));
-                FullTextLine := getTextL + translateNote."Target Text" + '</target>';
-                translateFileEditTargetL."Text 1 (1-250)" := CopyStr(FullTextLine, 1, MaxStrLen(translateFileEditTargetL."Text 1 (1-250)"));
-                if StrLen(FullTextLine) > MaxStrLen(translateFileEditTargetL."Text 1 (1-250)") then
-                    translateFileEditTargetL."Text 2 (250-500)" := copystr(CopyStr(FullTextLine, MaxStrLen(translateFileEditTargetL."Text 1 (1-250)") + 1), 1, MaxStrLen(translateFileEditTargetL."Text 2 (250-500)"));
-                translateFileEditTargetL.Modify();
+                if translateFileEditTargetL."Is Not Translate" then begin
+                    translateFileEditTargetL."Is Not Translate" := false;
+                    translateFileEditTargetL."Translate Text" := translateNote."Target Text";
+                    checkPosStart := StrPos(translateFileEditTargetL."Text 1 (1-250)", '<target>');
+                    getTextL := CopyStr(translateFileEditTargetL."Text 1 (1-250)", 1, (checkPosStart + 7));
+                    FullTextLine := getTextL + translateNote."Target Text" + '</target>';
+                    translateFileEditTargetL."Text 1 (1-250)" := CopyStr(FullTextLine, 1, MaxStrLen(translateFileEditTargetL."Text 1 (1-250)"));
+                    if StrLen(FullTextLine) > MaxStrLen(translateFileEditTargetL."Text 1 (1-250)") then
+                        translateFileEditTargetL."Text 2 (250-500)" := copystr(CopyStr(FullTextLine, MaxStrLen(translateFileEditTargetL."Text 1 (1-250)") + 1), 1, MaxStrLen(translateFileEditTargetL."Text 2 (250-500)"));
+                    translateFileEditTargetL.Modify();
+                end;
             until translateFile.Next() = 0;
     end;
 
@@ -256,6 +262,7 @@ codeunit 78500 "ESD Translation Mgt."
         txtCRLFL: Text[2];
         finishMsg: Label 'Finish';
         streamOutL: OutStream;
+        skipExport: Boolean;
     begin
         txtCRLFL := '';
         txtCRLFL[1] := 13;
@@ -270,11 +277,15 @@ codeunit 78500 "ESD Translation Mgt."
         txtFileL.CreateOutStream(streamOutL);
 
         translateFile.SetRange("Project Code", GetProjectCode);
+        translateFile.setrange("Is Not Translate", false);
         if translateFile.FindSet() then
             repeat
-                StreamOutL.WRITETEXT(translateFile."Text 1 (1-250)");
-                StreamOutL.WRITETEXT(translateFile."Text 2 (250-500)");
-                StreamOutL.WRITETEXT(txtCRLFL);
+                skipExport := StrPos(translateFile."Text 1 (1-250)", '<target state="needs-translation"/>') <> 0;
+                if not skipExport then begin
+                    StreamOutL.WRITETEXT(translateFile."Text 1 (1-250)");
+                    StreamOutL.WRITETEXT(translateFile."Text 2 (250-500)");
+                    StreamOutL.WRITETEXT(txtCRLFL);
+                end;
             until translateFile.Next() = 0;
         TxtFileL.CLOSE();
         Message(finishMsg);

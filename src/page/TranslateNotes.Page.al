@@ -130,6 +130,28 @@ page 78504 "ESD Translate Notes"
                         until translateNote.Next() = 0;
                 end;
             }
+            action(CopySourceToTarget)
+            {
+                ApplicationArea = All;
+                Caption = 'Copy Source to Target';
+                Image = Copy;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+
+                trigger OnAction()
+                var
+                    translateNote: Record "ESD Translate Note";
+                begin
+                    CurrPage.SetSelectionFilter(translateNote);
+                    if translateNote.FindSet(true) then
+                        repeat
+                            translateNote.validate("Target Text", translateNote."Source Text");
+                            translateNote.Modify();
+                        until translateNote.Next() = 0;
+                end;
+            }
         }
     }
 }

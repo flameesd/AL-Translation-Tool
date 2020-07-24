@@ -58,5 +58,9 @@ table 78502 "ESD Translate File"
         {
             Clustered = true;
         }
+        key(TransType; "Translate Type")
+        {
+
+        }
     }
 }
